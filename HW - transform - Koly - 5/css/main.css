@@ -1,0 +1,176 @@
+.center{
+  width: 255px;
+  height: 255px;
+  float: left;
+  margin: 50px 0 0 50px;
+  background-color: #fff123;
+}
+.center i:first-child{
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  transform: translate(15px, 20px) rotate(-45deg); 
+}
+.center i:last-child{
+  width: 230px;
+  height: 50px;
+  position: absolute;
+ transform: translate(-11px, 14px) rotate(45deg); 
+}
+.center i:before{
+  content: '';
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  background-color: silver;
+  animation: eye 3s ease-in-out infinite;
+  transform: scaleX(0.0);
+}
+
+.center::after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 250px;
+  border: 3px solid #e03a72;
+  border-radius: 100%;
+  animation-name: circle;
+  animation: circle 2s ease-in-out infinite;
+
+}
+@keyframes eye {
+  90% { transform: none; }   
+ /* 95% { transform: scaleY(0.1); }*/
+ }
+
+
+@keyframes circle{
+  0%, 34.999% {
+    -webkit-clip-path: polygon(0 0);
+            clip-path: polygon(0 0);
+    border-color: #e03a72;
+  }
+  54.999% {
+    -webkit-clip-path: polygon(0 0);
+            clip-path: polygon(0 0);
+  }
+  55% {
+    display: block;
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px);
+            clip-path: polygon(125px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px);
+  }
+  57.5% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, 125px -125px, 125px -125px, 125px -125px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, 125px -125px, 125px -125px, 125px -125px);
+  }
+  60% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, -125px 125px, -125px 125px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, -125px 125px, -125px 125px);
+  }
+  62.5% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 125px 375px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 125px 375px);
+  }
+  65%, 100% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 375px 125px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 375px 125px);
+    border-color: red;
+  }
+}
+
+/* второй вариант*/
+
+.second{
+  width: 255px;
+  height: 255px;
+  float: left;
+  margin: 50px 0 0 50px;
+  background-color: #ffc123;
+  position: relative;
+  left: 30px;
+}
+
+.second i:first-child{
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 87%;
+  left: 16%;
+}
+
+.second i:last-child{
+ position: absolute;
+ transform: rotate(45deg);
+ top: 15%;
+ left: 15%;
+ 
+}
+.second i:before{
+  content: '';
+  width: 255px;
+  height: 3px;
+  position: absolute;
+  background-color: silver;
+  animation: eyes 2s ease-in-out infinite;
+  transform: scaleX(0.0);
+}
+@keyframes eyes {
+  90% { transform: none; }   
+ /* 95% { transform: scaleY(0.1); }*/
+ }
+
+.second:hover:after{
+  width: 250px;
+  height: 250px;
+  content:'';
+  position: absolute;
+  display: block;
+  border: 3px solid #e03a72;
+  border-radius: 100%;
+  animation: circlen 3s ease-in infinite;
+}
+@keyframes circlen{
+  0%, 34.999% {
+    -webkit-clip-path: polygon(0 0);
+            clip-path: polygon(0 0);
+    border-color: #e03a72;
+  }
+  54.999% {
+    -webkit-clip-path: polygon(0 0);
+            clip-path: polygon(0 0);
+  }
+  55% {
+    display: block;
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px);
+            clip-path: polygon(125px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px, 375px 125px);
+  }
+  57.5% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, 125px -125px, 125px -125px, 125px -125px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, 125px -125px, 125px -125px, 125px -125px);
+  }
+  60% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, -125px 125px, -125px 125px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, -125px 125px, -125px 125px);
+  }
+  62.5% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 125px 375px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 125px 375px);
+  }
+  65%, 100% {
+    -webkit-clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 375px 125px);
+            clip-path: polygon(125px 125px, 375px 125px, 125px -125px, -125px 125px, 125px 375px, 375px 125px);
+    border-color: red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  
